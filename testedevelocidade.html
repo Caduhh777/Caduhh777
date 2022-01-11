@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste de velocidade</title>
+    <h1>teste sua velociade agora</h1>
+</head>
+<body>
+    sua velocidade <input type="number" name="vel" id="vel1">
+    <input type="button" value="verificar" onclick="ver()"> 
+    <div id="res">
+
+    </div>
+
+    <script>
+        function ver() {
+            var velcar = window.document.querySelector('input#vel1')
+            var res = window.document.getElementById('res')
+            var vel = Number(velcar.value)
+            res.innerHTML = 'sua velocidade e de ' + vel + 'Km/H'
+            if (vel > 60) {
+                res.innerHTML += '<p>voce esta multado'
+            } else {
+                res.innerHTML += '<p>parabens voce esta dentro do limite'
+            }
+
+        }
+    </script>
+    
+</body>
+</html>
